@@ -1,0 +1,8 @@
+# 환경 변수 파일과 secrets 디렉터리가 스테이지되면 커밋을 막는다.
+# .env.example 같은 예시 파일은 허용한다.
+if git diff --cached --name-only | grep -E '(^|/)(\.env($|\.)|secrets/)' | grep -v -E '\.env\.example$'; then
+  echo "오류: 환경 변수 또는 비밀 파일이 스테이지되어 있습니다. git restore --staged <파일>로 제외하세요." >&2
+  exit 1
+fi
+
+npx lint-staged

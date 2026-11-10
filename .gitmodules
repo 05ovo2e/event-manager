@@ -1,0 +1,3 @@
+[submodule "mcp-shrimp-task-manager"]
+	path = mcp-shrimp-task-manager
+	url = https://github.com/cjo4m06/mcp-shrimp-task-manager.git

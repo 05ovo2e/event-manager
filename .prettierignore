@@ -1,0 +1,18 @@
+# 빌드 산출물과 의존성
+.next
+node_modules
+out
+build
+
+# 생성 파일과 잠금 파일
+package-lock.json
+lib/database.types.ts
+next-env.d.ts
+
+# 독립 서브모듈
+mcp-shrimp-task-manager
+
+# 포맷 대상에서 제외하는 문서와 설정
+supabase
+docs
+.claude
